@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;ApplicationContext.xml&apos; to &apos;Blob_Clob/src/com.sikku.resources&apos;&#x0D;&#x0A;- Original project: &apos;BatchUpdation&apos;&#x0D;&#x0A;- Destination element: &apos;Blob_Clob/src/com.sikku.resources&apos;&#x0D;&#x0A;- Original element: &apos;ApplicationContext.xml&apos;" description="Copy file" destination="=Blob_Clob/src&lt;com.sikku.resources" element1="src/com/sikku/resources/ApplicationContext.xml" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1681403590578" units="0" version="1.0"/>
+</session>

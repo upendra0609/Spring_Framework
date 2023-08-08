@@ -1,0 +1,28 @@
+package com.sikku.test;
+
+import java.io.File;
+import java.io.FileInputStream;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import com.sikku.dao.EmployeeDaoImpl;
+import com.sikku.dto.Employee;
+
+public class Test {
+
+	public static void main(String[] args) {
+		ApplicationContext context = new  ClassPathXmlApplicationContext("/com/sikku/resources/ApplicationContext.xml");
+		EmployeeDaoImpl dao = (EmployeeDaoImpl)context.getBean("employeeDao");
+		
+		Employee emp = new Employee();
+		emp.setEno(100);
+		emp.setEname("AAA");
+		emp.setImage(new File("C:\\Users\\upendra singh\\Desktop\\books\\book.jpg"));
+		emp.setResume(new File("C:\\Users\\upendra singh\\Desktop\\a.txt"));
+
+		dao.insertEmployee(emp);
+
+	}
+
+}

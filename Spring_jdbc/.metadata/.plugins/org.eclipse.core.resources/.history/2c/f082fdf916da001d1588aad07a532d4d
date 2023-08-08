@@ -1,0 +1,18 @@
+package com.sikku.dao;
+
+import com.sikku.dto.Employee;
+
+public class EmployeeDaoImpl implements EmployeeDao {
+
+	@Override
+	public void insertEmployee(Employee emp) {
+
+	}
+
+	@Override
+	public Employee readEmployee() {
+		
+		return null;
+	}
+
+}

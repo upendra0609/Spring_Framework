@@ -1,0 +1,10 @@
+package com.sikku.dto;
+
+public class Employee {
+	private int eno;
+	private String ename;
+	private float esal;
+	private String eaddr;
+	
+
+}

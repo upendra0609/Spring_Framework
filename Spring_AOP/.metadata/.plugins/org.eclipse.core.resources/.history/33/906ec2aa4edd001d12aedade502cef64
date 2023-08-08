@@ -1,0 +1,17 @@
+package com.sikku.service;
+
+public class EmployeeServiceImpl implements EmployeeService {
+
+	@Override
+	public void getEmployeeDetail() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void displayEmployeeDetail() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

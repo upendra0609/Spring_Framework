@@ -1,0 +1,28 @@
+package com.sikku.test;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import com.sikku.dao.EmployeeDao;
+import com.sikku.entity.Employee;
+
+public class Test {
+
+	public static void main(String[] args) {
+		ApplicationContext context = new ClassPathXmlApplicationContext("ApplicationContext.xml");
+		
+		EmployeeDao dao =(EmployeeDao)context.getBean("empDao");
+		
+		Employee emp = new Employee();
+		emp.setEno(111);
+		emp.setEname("AAA");
+		emp.setEsal(20000);
+		emp.setEaddr("pune");
+		
+		String insertEmployee = dao.insertEmployee(emp);
+		
+		System.out.println(insertEmployee);
+
+	}
+
+}

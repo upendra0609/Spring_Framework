@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<typeInfoHistroy>
+    <typeInfo handle="=app08/D:\/Spring\/Spring_MVC\/app08\/WebContent\/WEB-INF\/lib\/spring-webmvc-4.3.9.RELEASE.jar&lt;org.springframework.web.servlet.mvc(Controller.class[Controller" modifiers="1537" timestamp="1683653877497"/>
+    <typeInfo handle="=app09/D:\/Spring\/Spring_MVC\/app09\/WebContent\/WEB-INF\/lib\/spring-webmvc-4.3.9.RELEASE.jar&lt;org.springframework.web.servlet.mvc(Controller.class[Controller" modifiers="1537" timestamp="1683657165155"/>
+    <typeInfo handle="=app09/D:\/Spring\/Spring_MVC\/app09\/WebContent\/WEB-INF\/lib\/spring-core-4.3.9.RELEASE.jar&lt;org.springframework.core(ControlFlow.class[ControlFlow" modifiers="1050113" timestamp="1683657165175"/>
+    <typeInfo handle="=app10/D:\/Spring\/Spring_MVC\/app10\/WebContent\/WEB-INF\/lib\/spring-core-4.3.9.RELEASE.jar&lt;org.springframework.core(ControlFlow.class[ControlFlow" modifiers="1050113" timestamp="1683999850382"/>
+    <typeInfo handle="=app10/D:\/Spring\/Spring_MVC\/app10\/WebContent\/WEB-INF\/lib\/spring-webmvc-4.3.9.RELEASE.jar&lt;org.springframework.web.servlet.mvc(Controller.class[Controller" modifiers="1537" timestamp="1683999850356"/>
+    <typeInfo handle="=app13DataValidation/D:\/Spring\/Spring_MVC\/app13DataValidation\/WebContent\/WEB-INF\/lib\/spring-context-3.2.9.RELEASE.jar&lt;org.springframework.validation(Validator.class[Validator" modifiers="1537" timestamp="1684433689942"/>
+    <typeInfo handle="=app17HandlerInterceptor/D:\/Spring\/Spring_MVC\/app17HandlerInterceptor\/WebContent\/WEB-INF\/lib\/spring-webmvc-4.3.9.RELEASE.jar&lt;org.springframework.web.servlet(HandlerInterceptor.class[HandlerInterceptor" modifiers="1537" timestamp="1684866992351"/>
+    <typeInfo handle="=app17HandlerInterceptor/D:\/Spring\/Spring_MVC\/app17HandlerInterceptor\/WebContent\/WEB-INF\/lib\/spring-webmvc-4.3.9.RELEASE.jar&lt;org.springframework.web.servlet(HandlerAdapter.class[HandlerAdapter" modifiers="1537" timestamp="1684866992351"/>
+    <typeInfo handle="=app18ExceptionHandling/D:\/Download\/Software\/Software\/STS\/sts-4.18.0.RELEASE\/plugins\/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.6.v20230204-1729\/jre\/lib\/jrt-fs.jar`java.management=/javadoc_location=/https:\/\/docs.oracle.com\/en\/java\/javase\/17\/docs\/api\/=/&lt;javax.management(RuntimeErrorException.class[RuntimeErrorException" modifiers="33" timestamp="1679497833625"/>
+    <typeInfo handle="=app22Tiles/src&lt;com.sikku.service{StudentService.java[StudentService" modifiers="513" timestamp="1687690993477"/>
+</typeInfoHistroy>

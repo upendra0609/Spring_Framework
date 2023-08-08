@@ -1,0 +1,58 @@
+package com.sikku.dao;
+
+
+
+import org.springframework.orm.hibernate4.HibernateTemplate;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.sikku.beans.Employee;
+
+public class EmployeeDaoImpl implements EmployeeDao {
+	
+	private HibernateTemplate hibernateTemplate;
+	
+
+	public void setHibernateTemplate(HibernateTemplate hibernateTemplate) {
+		this.hibernateTemplate = hibernateTemplate;
+	}
+
+	@Transactional
+	@Override
+	public String insert(Employee emp) {
+		String status = "";
+		try {
+			int eno =(int) hibernateTemplate.save(emp);
+			if(eno==emp.getEno()) {
+				status = "success";
+			}else {
+				status = "fail";
+			}
+		} catch (Exception e) {
+			status = "fail";
+			e.printStackTrace();
+		}
+		return status;
+	}
+
+	@Transactional
+	@Override
+	public Employee search(int eno) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Transactional
+	@Override
+	public String update(Employee emp) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Transactional
+	@Override
+	public String delete(Employee emp) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

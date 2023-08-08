@@ -1,0 +1,17 @@
+package com.sikku.test;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import com.sikku.dao.EmployeeDao;
+import com.sikku.dao.EmployeeDaoImpl;
+
+public class Test {
+
+	public static void main(String[] args) {
+		ApplicationContext context = new ClassPathXmlApplicationContext("/com/sikku/resources/ApplicationContext.xml");
+		EmployeeDaoImpl dao = (EmployeeDaoImpl)context.getBean("employeeDao");
+
+	}
+
+}

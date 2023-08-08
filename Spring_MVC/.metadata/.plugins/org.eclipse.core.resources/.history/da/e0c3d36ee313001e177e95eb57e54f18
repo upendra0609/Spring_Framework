@@ -1,0 +1,47 @@
+package com.sikku.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.sikku.command.Student;
+import com.sikku.dao.StudentDao;
+import com.sikku.entity.StudentEntity;
+
+@Service("studentService")
+public class StudentServiceImpl implements StudentService {
+	
+	@Autowired
+	private StudentDao studentDao;
+
+	@Transactional
+	@Override
+	public String addStudent(Student student) {
+		StudentEntity studentEntity = new StudentEntity();
+		studentEntity.setSid(student.getSid());
+		studentEntity.setSname(student.getSname());
+		studentEntity.setSaddr(student.getSaddr());
+		
+		String status = studentDao.add(studentEntity);
+		return status;
+	}
+
+	@Override
+	public Student searchStudent(String sid) {
+		StudentEntity studentEntity = studentDao.search(sid);
+		if(studentEntity!=null) {
+			Student student = new Student();
+			student.setSid(studentEntity.getSid());
+			student.setSname(studentEntity.getSname());
+			student.setSaddr(studentEntity.getSaddr());
+		}
+		return null;
+	}
+
+	@Override
+	public String deleteStudent(Student student) {
+		
+		return null;
+	}
+
+}

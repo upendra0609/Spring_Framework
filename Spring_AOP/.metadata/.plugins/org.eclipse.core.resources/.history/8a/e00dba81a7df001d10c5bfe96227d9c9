@@ -1,0 +1,9 @@
+package com.sikku.service;
+
+import com.sikku.beans.Account;
+
+public interface TransactionService {
+	
+	public String withhdraw(Account acc,int wd_amt);
+
+}

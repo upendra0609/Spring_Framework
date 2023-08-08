@@ -1,0 +1,89 @@
+package com.sikku.dao;
+
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+
+import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.sikku.entity.Employee;
+
+@Repository
+public class EmployeeDaoImpl implements EmployeeDao {
+
+	@PersistenceContext
+	private EntityManager entityManager;
+
+	@Override
+	@Transactional
+	public String insertEmployee(Employee emp) {
+		String status = "";
+
+		try {
+			emp = findEmployee(emp.getEno());
+			if (emp != null) {
+				entityManager.persist(emp);
+				status = "inserted";
+			} else {
+				status = "already existed";
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+			status = "fail";
+		}
+		return status;
+	}
+
+	@Override
+	@Transactional
+	public String updateEmployee(Employee emp) {
+		String status = "";
+		try {
+			Employee emp1 = findEmployee(emp.getEno());
+			if(emp1!=null) {
+				emp1.setEname(emp.getEname());
+				emp1.setEsal(emp.getEsal());
+				emp1.setEaddr(emp.getEaddr());
+				status = "updated";
+			}else {
+				status = "emp not existed";
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+			status = "fail";
+		}
+		return status;
+	}
+
+	@Override
+	public Employee findEmployee(int eno) {
+		Employee emp = null;
+		try {
+			emp = (Employee) entityManager.find(Employee.class, eno);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return emp;
+	}
+
+	@Override
+	@Transactional
+	public String deleteEmployee(int eno) {
+		String status = "";
+
+		try {
+			Employee emp = findEmployee(eno);
+			if (emp != null) {
+				entityManager.remove(emp);
+				status = "deleted";
+			} else {
+				status = "not existed";
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+			status = "fail";
+		}
+		return status;
+	}
+
+}

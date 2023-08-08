@@ -1,0 +1,5 @@
+package com.sikkucontroller;
+
+public class HomeController {
+
+}

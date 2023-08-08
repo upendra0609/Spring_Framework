@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="empBean" class="com.sikku.beans.Employee">
+		<property name="eno" value="111" />
+		<property name="ename" value="AAA" />
+		<property name="esal" value="3000" />
+		<property name="eaddr" value="Pune" />
+		<property name="emobile" value="91-9876543210" />
+		<property name="eemail" value="aaa@gmail.com" />
+	</bean>
+
+	<!-- Target -->
+	<bean id="empService" class="com.sikku.service.EmployeeServiceImpl" />
+
+	<!-- Advice -->
+	<bean id="employeeValidatorAdvice" class="com.sikku.advice.validator.EmployeeValidatorAdvice" />
+
+	<!-- point cut -->
+	<bean id="pointcut" class=" org.springframework.aop.support.NameMatchMethodPointcut">
+		<property name="mappedNames">
+			<array>
+				<value>getEmployeeDetail</value>
+				<value>displayEmployeeDetail</value>
+			</array>
+		</property>
+	</bean>
+	
+	<!-- advisor -->
+	<bean id="advisor" class="org.springframework.aop.support.DefaultPointcutAdvisor">
+	   <property name="pointcut" ref="pointcut"/>
+	   <property name="advice" ref="employeeValidatorAdvice"/>
+	</bean>
+	
+	<!-- proxy -->
+	<bean id="proxy" class="org.springframework.aop.framework.ProxyFactoryBean">
+	   <property name="target" ref="empService"/>
+	   <property name="interceptorNames">
+	       <list>
+	          <value>advisor</value>
+	       </list>
+	   </property>
+	</bean>
+
+</beans>

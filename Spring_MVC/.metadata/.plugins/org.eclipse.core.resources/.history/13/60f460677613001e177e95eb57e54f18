@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC 
+"-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+"http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+	<definition name="welcomeDef" template="/WEB-INF/layout.jsp">
+		<put-attribute name="header" value="/WEB-INF/header.jsp" />
+		<put-attribute name="menu" value="/WEB-INF/menu.jsp" />
+		<put-attribute name="body" value="/WEB-INF/welcome.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/footer.jsp" />
+	</definition>
+	<definition name="addDef" template="welcomeDef">
+		<put-attribute name="body" value="/WEB-INF/addform.jsp" />
+	</definition>
+	<definition name="searchDef" template="welcomeDef">
+		<put-attribute name="body" value="/WEB-INF/searchform.jsp" />
+	</definition>
+	<definition name="deleteDef" template="welcomeDef">
+		<put-attribute name="body" value="/WEB-INF/deleteform.jsp" />
+	</definition>
+	<definition name="statusDef" template="welcomeDef">
+		<put-attribute name="body" value="/WEB-INF/status.jsp" />
+	</definition>
+	<definition name="studentDetailsDef" template="welcomeDef">
+		<put-attribute name="body" value="/WEB-INF/studentdetails.jsp" />
+	</definition>
+</tiles-definitions>

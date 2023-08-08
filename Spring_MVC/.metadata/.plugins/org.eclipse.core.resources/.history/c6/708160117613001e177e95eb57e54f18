@@ -1,0 +1,37 @@
+package com.sikku.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.ModelAndView;
+
+import com.sikku.command.Student;
+import com.sikku.service.StudentService;
+
+@Controller
+public class StudentController {
+	
+	
+	@Autowired
+	private StudentService studentService;
+
+	@RequestMapping(value = "/welcome", method = RequestMethod.GET)
+	public String showWelcomePage() {
+		System.out.println("welcome");
+		return "welcomeDef";
+	}
+	
+	@RequestMapping(value = "/add", method = RequestMethod.GET)
+	public ModelAndView ShowAddForm() {
+		System.out.println("add");
+		return new ModelAndView("addDef", "student", new Student());
+	}
+	
+	@RequestMapping(value = "/add", method = RequestMethod.POST)
+	public ModelAndView add(Student student) {
+		String status="";
+		status = studentService.addStudent(student);
+		return new ModelAndView("statusDef", "status", status);
+	}
+}

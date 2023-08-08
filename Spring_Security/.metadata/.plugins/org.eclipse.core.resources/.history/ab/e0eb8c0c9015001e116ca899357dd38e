@@ -1,0 +1,8 @@
+package com.sikkucontroller;
+
+import org.springframework.stereotype.Controller;
+
+@Controller
+public class HomeController {
+
+}

@@ -1,0 +1,31 @@
+package com.sikku.dao;
+
+import com.sikku.beans.Employee;
+
+public class EmployeeDaoImpl implements EmployeeDao {
+
+	@Override
+	public String insert(Employee emp) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Employee search(int eno) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String update(Employee emp) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String delete(Employee emp) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

@@ -1,0 +1,8 @@
+package com.sikku.exception;
+
+public class InsufficientFundException extends Exception {
+
+	public InsufficientFundException(String err_msg) {
+		super(err_msg);
+	}
+}

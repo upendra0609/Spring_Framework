@@ -1,0 +1,89 @@
+package com.sikku.dao;
+
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
+
+import com.sikku.dto.Student;
+
+public class StudentDaoImpl implements StudentDao {
+
+	private NamedParameterJdbcTemplate template;
+	
+
+	public void setTemplate(NamedParameterJdbcTemplate template) {
+		this.template = template;
+	}
+	
+	
+	// for method reference
+		private static Student getStd(ResultSet rs, int index) {
+			Student std = new Student();
+			try {
+				std.setSid(rs.getInt("sid"));
+				std.setSname(rs.getString("sname"));
+				std.setSaddr(rs.getString("saddr"));
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+			return std;
+		}
+	
+
+	@Override
+	public String add(Student std) {
+		String status ="";
+		Student searchStudent = search(std.getSid());
+		
+		if(searchStudent==null) {
+			String query ="insert into student values(:sid,:sname,:saddr)";
+			Map<String,Integer> map = new HashMap<String,Integer>();
+			map.put("sid", std.getSid());
+			
+		}else {
+			status = "student already exist";
+		}
+		try {
+			String query = "";
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+		return null;
+	}
+
+	@Override
+	public Student search(int sid) {
+		Student std = null;
+		
+		try {
+			String query = "select * from student where sid = :sid";
+			Map<String,Object> map = new HashMap<String,Object>();
+			map.put("sid", sid);
+			List<Student> studentList = template.query(query, map,StudentDaoImpl::getStd);
+			if(studentList.isEmpty()) {
+				std = null;
+			}else {
+				std = studentList.get(0); 
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+			std = null;
+		}
+		return std;
+	}
+
+	@Override
+	public String update(Student std) {
+		return null;
+	}
+
+	@Override
+	public String delete(int sid) {
+		return null;
+	}
+
+}

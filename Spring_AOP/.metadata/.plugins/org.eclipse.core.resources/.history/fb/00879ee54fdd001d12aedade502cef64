@@ -1,0 +1,20 @@
+package com.sikku.advice.validator;
+
+import java.lang.reflect.Method;
+
+import org.springframework.aop.MethodBeforeAdvice;
+
+import com.sikku.beans.Employee;
+
+public class EmployeeValidatorAdvice implements MethodBeforeAdvice {
+
+	@Override
+	public void before(Method method, Object[] param, Object target) throws Throwable {
+		
+		for(Object obj : param) {
+			Employee emp = (Employee) obj;
+		}
+		
+	}
+
+}

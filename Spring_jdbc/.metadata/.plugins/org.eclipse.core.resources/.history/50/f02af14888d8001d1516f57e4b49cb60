@@ -1,0 +1,5 @@
+package com.sikku.dto;
+
+public class Employee {
+
+}

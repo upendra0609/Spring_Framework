@@ -1,0 +1,5 @@
+package com.sikku.advice.validator;
+
+public class EmployeeValidatorAdvice {
+
+}

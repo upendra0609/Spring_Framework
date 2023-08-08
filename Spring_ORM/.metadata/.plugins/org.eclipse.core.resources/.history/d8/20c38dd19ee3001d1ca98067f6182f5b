@@ -1,0 +1,5 @@
+package com.sikku.entity;
+
+public class Employee {
+
+}

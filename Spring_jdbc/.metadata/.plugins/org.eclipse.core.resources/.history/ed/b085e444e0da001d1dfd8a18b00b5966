@@ -1,0 +1,8 @@
+package com.sikku.dao;
+
+import com.sikku.dto.Employee;
+
+public interface EmployeeDao {
+
+	abstract public String add(Employee emp);
+}

@@ -1,0 +1,5 @@
+package com.sikku.exception;
+
+public class InsufficientFundException {
+
+}

@@ -1,0 +1,34 @@
+package com.sikku.dao;
+
+import org.springframework.jdbc.core.JdbcTemplate;
+
+import com.sikku.dto.Employee;
+
+public class EmployeeDaoImpl implements EmployeeDao {
+	private JdbcTemplate jdbcTemplate;
+
+	public void setJdbcTemplate(JdbcTemplate jdbcTemplate) {
+		this.jdbcTemplate = jdbcTemplate;
+	}
+
+	@Override
+	public String add(Employee emp) {
+		String status = "";
+
+		try {
+			String query = "insert into employee values(?,?,?,?)";
+			int rowUpdate = jdbcTemplate.update(query,new Object[] { emp.getEno(), emp.getEname(), emp.getEsal(), emp.getEaddr() });
+//			jdbcTemplate.update(status,emp.getEno(),emp.getEname(),emp.getEsal(),emp.getEaddr());
+			if (rowUpdate == 1) {
+				status = "inserted";
+			} else {
+				status = "not inserted";
+			}
+		} catch (Exception e) {
+			status = "something went wrong";
+			e.printStackTrace();
+		}
+		return status;
+	}
+
+}

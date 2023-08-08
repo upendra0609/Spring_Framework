@@ -1,0 +1,12 @@
+package com.sikku.dto;
+
+import java.io.File;
+
+public class Employee {
+	private int eno;
+	private String ename;
+	private File image;
+	private File resume;
+	
+
+}

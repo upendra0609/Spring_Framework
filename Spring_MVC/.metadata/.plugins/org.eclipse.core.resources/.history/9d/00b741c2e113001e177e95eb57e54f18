@@ -1,0 +1,53 @@
+package com.sikku.dao;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.orm.hibernate4.HibernateTemplate;
+import org.springframework.stereotype.Repository;
+
+import com.sikku.entity.StudentEntity;
+
+@Repository("studentDao")
+public class StudentDaoImpl implements StudentDao {
+	
+	@Autowired
+	private HibernateTemplate hibernateTemplate;
+
+	@Override
+	public String add(StudentEntity studentEntity) {
+		String status="";
+		try {
+			StudentEntity studentEntity1 = search(studentEntity.getSid());
+			if(studentEntity1==null) {
+				String pk_value = (String) hibernateTemplate.save(studentEntity);
+				if(pk_value.equals(studentEntity.getSid())) {
+					status = "Student Inserted Successfully";
+				}else {					
+					status="Student Insertion Failure";
+				}
+			}else {
+				status="Student existed already";
+			}
+		} catch (Exception e) {
+			status = "Student Insertion Failure";
+			e.printStackTrace();
+		}
+		return status;
+	}
+
+	@Override
+	public StudentEntity search(String sid) {
+		StudentEntity studentEntity1 = null;
+		try {
+			studentEntity1 = (StudentEntity) hibernateTemplate.get(StudentEntity.class, sid);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return studentEntity1;
+	}
+
+	@Override
+	public String delete(StudentEntity studentEntity) {
+		return null;
+	}
+
+}

@@ -1,0 +1,19 @@
+package com.sikku.service;
+
+import com.sikku.beans.Employee;
+
+public class EmployeeServiceImpl implements EmployeeService {
+
+	@Override
+	public void getEmployeeDetail(Employee emp) {
+
+		
+	}
+
+	@Override
+	public void displayEmployeeDetail(Employee emp) {
+
+		
+	}
+
+}

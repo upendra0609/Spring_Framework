@@ -1,0 +1,18 @@
+package com.sikku.dao;
+
+import org.springframework.jdbc.core.JdbcTemplate;
+
+import com.sikku.dto.Employee;
+
+public class EmployeeDaoImpl implements EmployeeDao {
+	private JdbcTemplate jdbcTemplate;
+	
+	
+
+	@Override
+	public String add(Employee emp) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

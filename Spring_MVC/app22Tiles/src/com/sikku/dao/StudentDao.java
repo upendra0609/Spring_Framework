@@ -1,0 +1,10 @@
+package com.sikku.dao;
+
+import com.sikku.entity.StudentEntity;
+
+public interface StudentDao {
+	public String add(StudentEntity student);
+	public StudentEntity search(String sid);
+	public String delete(String sid);
+
+}

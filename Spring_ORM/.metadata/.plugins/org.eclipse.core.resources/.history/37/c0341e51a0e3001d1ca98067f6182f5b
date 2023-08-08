@@ -1,0 +1,50 @@
+package com.sikku.dao;
+
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+
+import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.sikku.entity.Employee;
+
+
+@Repository
+public class EmployeeDaoImpl implements EmployeeDao {
+	
+	@PersistenceContext
+	private EntityManager entityManager;
+
+	@Override
+	@Transactional
+	public String insertEmployee(Employee emp) {
+		
+		return null;
+	}
+
+	@Override
+	@Transactional
+	public String updateEmployee(Employee emp) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Employee findEmployee(int eno) {
+		Employee emp = null;
+		 try {
+			emp = (Employee)entityManager.find(Employee.class, eno);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return emp;
+	}
+
+	@Override
+	@Transactional
+	public String deleteEmployee(int eno) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

@@ -1,0 +1,31 @@
+package com.sikku.service;
+
+import com.sikku.beans.Employee;
+
+public class EmployeeServiceImpl implements EmployeeService {
+
+	@Override
+	public void getEmployeeDetail(Employee emp) {
+		System.out.println("Employee details from getEmployeeDetail() Method");
+		System.out.println("------------------------------");
+		System.out.println("Employee number "+emp.getEno());
+		System.out.println("Employee Name "+emp.getEname());
+		System.out.println("Employee Salary "+emp.getEsal());
+		System.out.println("Employee Address "+emp.getEaddr());
+		System.out.println("Employee Mobile "+emp.getEmobile());
+		System.out.println("Employee Email "+emp.getEemail());
+		
+	}
+
+	@Override
+	public void displayEmployeeDetail(Employee emp) {
+		System.out.println("Employee details from displayEmployeeDetail() Method");
+		System.out.println("------------------------------");
+		System.out.println("Employee number "+emp.getEno());
+		System.out.println("Employee Name "+emp.getEname());
+		System.out.println("Employee Salary "+emp.getEsal());
+		System.out.println("Employee Address "+emp.getEaddr());
+		
+	}
+
+}
