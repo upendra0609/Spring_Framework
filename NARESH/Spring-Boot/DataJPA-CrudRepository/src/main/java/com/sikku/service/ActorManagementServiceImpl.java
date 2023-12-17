@@ -1,5 +1,9 @@
 package com.sikku.service;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -22,4 +26,12 @@ public class ActorManagementServiceImpl implements IActorManagementService {
 		}
 		return result;
 	}
+
+	@Override
+	public String registerActorsGroup(List<Actor> actors) {
+		ArrayList<Actor> list = (ArrayList<Actor>) actorRepo.saveAll(actors);
+		return list.stream().map((i) -> i.getAid()).collect(Collectors.toList()).toString();
+
+	}
+
 }
