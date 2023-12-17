@@ -1,0 +1,52 @@
+{"properties": [
+  {
+    "name": "ord.nit.idDetails.aadharid",
+    "type": "java.lang.String",
+    "description": "A description for 'ord.nit.idDetails.aadharid'"
+  },
+  {
+    "name": "ord.nit.idDetails.voterid",
+    "type": "java.lang.String",
+    "description": "A description for 'ord.nit.idDetails.voterid'"
+  },
+  {
+    "name": "ord.nit.idDetails.passportno",
+    "type": "java.lang.String",
+    "description": "A description for 'ord.nit.idDetails.passportno'"
+  },
+  {
+    "name": "ord.nit.idDetails.aadharid",
+    "type": "java.lang.String",
+    "description": "A description for 'ord.nit.idDetails.aadharid'"
+  },
+  {
+    "name": "ord.nit.idDetails.passportno",
+    "type": "java.lang.String",
+    "description": "A description for 'ord.nit.idDetails.passportno'"
+  },
+  {
+    "name": "org.nit.favColors[0]",
+    "type": "java.lang.String",
+    "description": "A description for 'org.nit.favColors[0]'"
+  },
+  {
+    "name": "org.nit.favColors[2]",
+    "type": "java.lang.String",
+    "description": "A description for 'org.nit.favColors[2]'"
+  },
+  {
+    "name": "org.nit.phone-numbers[0]",
+    "type": "java.lang.String",
+    "description": "A description for 'org.nit.phone-numbers[0]'"
+  },
+  {
+    "name": "org.nit.nickNames[0]",
+    "type": "java.lang.String",
+    "description": "A description for 'org.nit.nickNames[0]'"
+  },
+  {
+    "name": "org.nit.favColors[1]",
+    "type": "java.lang.String",
+    "description": "A description for 'org.nit.favColors[1]'"
+  }
+]}

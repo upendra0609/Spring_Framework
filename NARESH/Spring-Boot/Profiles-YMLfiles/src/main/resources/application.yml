@@ -1,0 +1,57 @@
+spring:
+ profiles:
+    active: test
+    
+---
+#dev
+spring:
+  profile: dev
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    url: jdbc:mysql://localhost:3306/mydb
+    password: root
+    dbcp2:
+      min-idle: '10'
+      max-total: '100'
+      max-wait-millis: '60000'
+    type: org.apache.commons.dbcp2.BasicDataSource
+    
+---
+#prod        
+
+spring:
+  profile: prod
+  datasource:
+    driver-class-name: oracle.jdbc.OracleDriver
+    username: system
+    url: jdbc:oracle:thin:@localhost:1521:xe
+    password: root
+
+---
+#test
+
+spring:
+  profile: test
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    url: jdbc:mysql://localhost:3306/mydb
+    password: root
+c3p0:
+  minsize: '10'
+  maxsize: '100'
+
+
+---
+#uat
+
+spring:
+  profile: uat
+  datasource:
+    driver-class-name: oracle.jdbc.OracleDriver
+    username: system
+    url: jdbc:oracle:thin:@localhost:1521:xe
+    type: oracle.ucp.jdbc.PoolDataSourceImpl
+    password: root
+

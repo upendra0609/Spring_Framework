@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/context
+                           http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<!-- Load properties file -->
+	<context:property-placeholder
+		location="classpath:com/sikku/commons/jdbc.properties" />
+
+	<context:component-scan base-package="com.sikku" />
+
+
+	<!-- DataSource -->
+	<bean id="dmds"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="${jdbc.driver}" />
+		<property name="url" value="${jdbc.url}" />
+		<property name="username" value="${jdbc.username}" />
+		<property name="password" value="${jdbc.password}" />
+	</bean>
+
+	<!-- alias name for DAO class bean id -->
+	<alias name="${required.dao}" alias="dao" />
+
+	<!-- <bean id="mysql" class="org.springframework.jdbc.datasource.DriverManagerDataSource"> 
+		<property name="driverClassName" value="com.mysql.cj.jdbc.Driver" /> <property 
+		name="url" value="jdbc:mysql:///bookstoredb" /> <property name="username" 
+		value="root" /> <property name="password" value="root" /> </bean> -->
+
+
+
+</beans>

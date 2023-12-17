@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+
+
+	<!-- by this we will not get single object -->
+	<!-- <bean id="s1" class="sikku.singleton.SingletonDemo"> </bean> <bean 
+		id="s2" class="sikku.singleton.SingletonDemo"> </bean> -->
+
+	<!-- by this we will get single object -->
+	<!-- <bean id="s1" class="sikku.singleton.SingletonDemo" factory-method="getInstance"> 
+		</bean> <bean id="s2" class="sikku.singleton.SingletonDemo" factory-method="getInstance"> 
+		</bean> -->
+
+	<!-- by this we will get single object -->
+	<bean id="s1" class="sikku.singleton.SingletonEnum"
+		factory-method="valueOf">
+		<constructor-arg>
+			<value>INSTANCE</value> <!-- Set the enum value here -->
+		</constructor-arg>
+	</bean>
+	<bean id="s2" class="sikku.singleton.SingletonEnum"
+		factory-method="valueOf">
+		<constructor-arg>
+			<value>INSTANCE</value> <!-- Set the enum value here -->
+		</constructor-arg>
+	</bean>
+
+
+
+</beans>

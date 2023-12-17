@@ -1,0 +1,32 @@
+#Employee Info
+#Simple property
+#<prefix>.<prop> =<value>
+org:
+  nit:
+    eno: 101
+    ename: Raja
+    
+    
+    favColors[0]: red
+    favColors[1]: yello
+    favColors[2]: blue
+    
+    nickNames:
+      - aa
+      - bb
+      - cc
+    
+    phone-numbers: 
+      - 1111
+      - 5555
+    
+    idDetails:
+      aadharid: AA43CG2552
+      pan:      BB43CG2552
+      passport: CC43CG2552
+    
+    comapny:
+      id: 14567
+      name: AAA
+      add: satna
+      size: 100
