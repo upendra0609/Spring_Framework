@@ -5,30 +5,29 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.NonNull;
-import lombok.RequiredArgsConstructor;
 
-@Entity
 @Data
+@AllArgsConstructor
 @NoArgsConstructor
-@RequiredArgsConstructor
+@Entity(name = "actor")
 public class Actor {
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.AUTO) // generator cfg
 	private Integer aid;
 
-	@Column(length = 20) // if column name and class name are different
-	@NonNull
+	// @NonNull
+	@Column(length = 20)
 	private String aname;
 
+	// @NonNull
 	@Column(length = 20)
-	@NonNull
 	private String category;
 
-	@Column(nullable = true, unique = true)
-	@NonNull
+	// @NonNull
+	@Column(unique = true, nullable = true)
 	private Long mobileNo;
 
 }
