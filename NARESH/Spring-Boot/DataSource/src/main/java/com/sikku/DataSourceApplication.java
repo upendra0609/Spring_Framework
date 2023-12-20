@@ -35,6 +35,7 @@ public class DataSourceApplication {
 	public static void main(String[] args) throws SQLException {
 		ConfigurableApplicationContext context = SpringApplication.run(DataSourceApplication.class, args);
 		Dao bean = context.getBean("dao", Dao.class);
+		System.out.println(bean);
 		context.close();
 	}
 
