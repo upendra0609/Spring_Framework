@@ -9,12 +9,20 @@ public class ShowHomeController {
 	@RequestMapping("/home")
 	public String source() {
 		System.out.println("Source");
-		return "forward:dest";
+		return "forward:redi";
 	}
+	
+	
+	@RequestMapping("/redi")
+	public String redirect() {
+		System.out.println("redirect");
+		return "redirect:dest";
+	}
+
 
 	@RequestMapping("/dest")
 	public String destination() {
-		System.out.println("Destination");
+		System.out.println("forward");
 		return "welcome";
 	}
 }
