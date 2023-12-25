@@ -7,7 +7,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class ShowHomeController {
 
 	@RequestMapping("/home")
-	public String launchHomePage() {
+	public String source() {
+		System.out.println("Source");
+		return "forward:dest";
+	}
+
+	@RequestMapping("/dest")
+	public String destination() {
+		System.out.println("Destination");
 		return "welcome";
 	}
 }

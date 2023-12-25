@@ -10,11 +10,11 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>Company.Name</groupId>
-	<artifactId>MVCBootProj1</artifactId>
+	<artifactId>MVCBootPro-Service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
-	<name>MVCBootProj1</name>
-	<description>Demo project for Spring Boot</description>
+	<name>MVCBootPro-Service</name>
+	<description>Service method</description>
 	<properties>
 		<java.version>21</java.version>
 	</properties>
@@ -37,7 +37,7 @@
 
 		<dependency>
 			<groupId>org.apache.tomcat.embed</groupId>
-			<artifactId>tomcat-embed-jasper</artifactId>			
+			<artifactId>tomcat-embed-jasper</artifactId>
 		</dependency>
 
 
